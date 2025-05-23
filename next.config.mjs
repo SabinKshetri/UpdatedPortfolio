@@ -1,4 +1,9 @@
+import sitemapConfig from './next-sitemap.config.js';
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  ...sitemapConfig,
+  
+};
 
 export default nextConfig;
