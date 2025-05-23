@@ -276,10 +276,8 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-20 text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} Sabin Kshetri. All rights reserved.</p>
-        </div>
+        
+       
       </div>
     </section>
   )
