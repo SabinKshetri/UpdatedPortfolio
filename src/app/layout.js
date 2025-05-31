@@ -25,6 +25,9 @@ export const metadata = {
     "Web Developer Portfolio",
   ],
   robots: "index, follow",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Sabin Kshetri | Software Developer",
     description:
@@ -33,7 +36,7 @@ export const metadata = {
     siteName: "Sabin Kshetri Portfolio",
     images: [
       {
-        url: "/sabinkshetri.png", 
+        url: "/sabinkshetri.png",
         width: 1200,
         height: 630,
         alt: "Sabin Kshetri Portfolio",
@@ -51,8 +54,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sabin Kshetri",
+    "url": "https://www.sabindangi1.com.np",
+    "jobTitle": "Full-Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance",
+    },
+    "sameAs": [
+      "https://github.com/SabinKshetri",
+      "https://www.linkedin.com/in/sabin-dangi-73b636207/"
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
