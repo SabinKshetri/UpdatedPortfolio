@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://sabindangi1.com.np
+Host: https://www.sabindangi1.com.np
 
 # Sitemaps
-Sitemap: https://sabindangi1.com.np/sitemap.xml
+Sitemap: https://www.sabindangi1.com.np/sitemap.xml
